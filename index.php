@@ -1,13 +1,21 @@
 <?php 
 
 
+
 if(isset($_GET['success']) && $_GET['success'] == 'logout'){
 
     session_start();
 	session_destroy();
 }
 
+if(isset($_GET['success']) && $_GET['success'] == 'loggedout'){
 
+      echo '<script language="javascript">';
+echo 'window.alert("A user was already logged in please login again to continue")';
+echo '</script>';
+session_start();
+session_destroy();
+}
 ?>
 
 

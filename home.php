@@ -20,9 +20,12 @@ if(!isset($_SESSION['user'])){
 if(isset($_GET['success']) && $_GET['success'] == 'true'){
 
 
-	echo '<script language="javascript">';
-echo 'alert("Please Logout to Continue")';
-echo '</script>';
+// 	echo '<script language="javascript">';
+// echo 'window.alert("Please Logout to Continue")';
+// echo '</script>';
+// echo "<script>redirect('index.php'); </script>";
+
+	header('location:index.php?success=loggedout');
 
 }
 
